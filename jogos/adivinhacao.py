@@ -10,7 +10,23 @@ numero_secreto = 42
 palpite = int(input("Digite o seu número: "))
 print("Você digitou", palpite)
 
-if(palpite == numero_secreto):
+acertou         = palpite == numero_secreto
+palpite_maior   = palpite > numero_secreto
+palpite_menor   = palpite < numero_secreto
+
+if(acertou):
     print("Você acertou")
 else:
-    print("Você erro o número")
+    if(palpite_maior):
+        print("Você erro o número, seu palpite foi maior que o número secreto")
+    elif(palpite):
+        print("Vocë erro o número, seu palpite foi menor que o número secreto")
+
+print("Fim do jogo!")
+
+#     Merge dictionaries in a single readable line
+#     This is available as of Python 3.9:
+first_dictionary  = {'primeiro_nome': 'Joao', 'localizacao': 'Munich'}
+second_dictionary = {'primeiro_nome': 'Joao', 'segundo_nome': 'Morina','localizacao': 'Bavaria, Munich'}
+result = first_dictionary | second_dictionary
+print(result)
